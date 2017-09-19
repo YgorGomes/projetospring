@@ -3,7 +3,9 @@ package br.com.fiap.projetospring.wscontroller;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -35,8 +37,12 @@ public class ClienteControoler {
 	
 	//End points
 	@RequestMapping(method=RequestMethod.POST, value="/clientes" , consumes=MediaType.APPLICATION_JSON_VALUE)
-	public void cadastrarCliente(@RequestBody Cliente cliente){
-		System.out.println("Chamou /clientes!");
+	public ResponseEntity<Cliente> cadastrarCliente(@RequestBody Cliente cliente){
+		
+		Cliente clienteCadastrado = cadastrar(cliente);
+		
+		return new ResponseEntity<Cliente>(clienteCadastrado, HttpStatus.CREATED);
+		
 	}
 
 }
