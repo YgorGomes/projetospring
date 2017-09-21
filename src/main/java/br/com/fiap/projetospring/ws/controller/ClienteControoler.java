@@ -1,4 +1,4 @@
-package br.com.fiap.projetospring.wscontroller;
+package br.com.fiap.projetospring.ws.controller;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.fiap.projetospring.wsmodel.Cliente;
+import br.com.fiap.projetospring.ws.model.Cliente;
 
 @RestController
 public class ClienteControoler {

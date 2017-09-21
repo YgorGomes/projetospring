@@ -1,4 +1,4 @@
-package br.com.fiap.projetospring.wsmodel;
+package br.com.fiap.projetospring.ws.model;
 
 public class Cliente {
 	private Integer id;
